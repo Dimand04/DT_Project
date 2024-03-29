@@ -17,7 +17,7 @@ MainMenu::~MainMenu()
 {
     delete ui;
 }
-//проверка
+
 void MainMenu::showMainMenu()
 {
     ui->frame_profile -> setGeometry (ui-> frame_profile ->x(),721, ui->frame_profile->width(), ui->frame_profile->height ());
