@@ -7,4 +7,7 @@
 
 bool getDBConnection(QSqlDatabase db);
 int showMessage(QString message, QString windowTitle, QMessageBox::Icon, QList<QMessageBox::Button>buttons);
+int showMessage(QString, QString, QMessageBox::Button, QMessageBox::Icon);
+int showMessage(QString, QString, QList<QMessageBox::Button>, QMessageBox::Icon);
+
 #endif // GLOBAL_H

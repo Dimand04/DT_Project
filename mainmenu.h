@@ -4,6 +4,14 @@
 #include <QMainWindow>
 #include <QSqlDatabase>
 #include <QProcess>
+#include <QSqlQuery>
+#include <QDate>
+#include <QtWidgets/QMainWindow>
+#include <QListWidget>
+#include <QTableWidget>
+#include <QBuffer>
+#include <QFileDialog>
+#include <QTimer>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainMenu; }
@@ -20,14 +28,21 @@ public slots:
     void showMainMenu();
     void showHeroesMenu();
     void showPlayerProfile();
-
-
+    void showAutorization();
+    void tryAutorization();
 
 private:
     Ui::MainMenu *ui;
     QProcess *test;
     QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE", "main");
-    QString currentIDPlayer;
+    QString m_PlayerID,
+            m_currentFrame,
+            currentIDPlayer;
 
+private:
+    void toggleFrame(const int, QString);
+    void toggleFrame(bool);
+    //void toggleFrame(bool, QString);
+    void toggleFrame();
 };
 #endif // MAINMENU_H
